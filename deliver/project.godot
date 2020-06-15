@@ -1,0 +1,89 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://src/actor/actor.gd"
+}, {
+"base": "Node",
+"class": "Controller",
+"language": "GDScript",
+"path": "res://src/controller/controller.gd"
+}, {
+"base": "Actor",
+"class": "Player",
+"language": "GDScript",
+"path": "res://src/actor/player/player.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://src/state_machine/state.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://src/state_machine/state_machine.gd"
+} ]
+_global_script_class_icons={
+"Actor": "",
+"Controller": "",
+"Player": "",
+"State": "",
+"StateMachine": ""
+}
+
+[application]
+
+config/name="deliver"
+run/main_scene="res://scenes/game/game.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Settings="*res://src/settings/settings.gd"
+WorldUtils="*res://src/world_utils/world_utils.gd"
+
+[input]
+
+move_forward={
+"deadzone": 0.5,
+"events": [  ]
+}
+move_back={
+"deadzone": 0.5,
+"events": [  ]
+}
+move_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+fire={
+"deadzone": 0.5,
+"events": [  ]
+}
+alt_fire={
+"deadzone": 0.5,
+"events": [  ]
+}
+jump={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
