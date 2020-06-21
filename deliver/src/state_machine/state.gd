@@ -2,9 +2,7 @@ extends Node
 
 class_name State
 
-const STATE_DONE_SIGNAL = "state_done"
-
-signal state_done(next_state_idx)
+signal state_done(next_state_key)
 
 var state_machine: WeakRef
 var actor: WeakRef
