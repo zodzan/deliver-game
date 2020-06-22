@@ -1,3 +1,5 @@
 extends Node
 
-var m_sensitivity: float
+const DEFAULT_M_SENSITIVITY = 5.0
+
+var m_sensitivity: float = DEFAULT_M_SENSITIVITY
